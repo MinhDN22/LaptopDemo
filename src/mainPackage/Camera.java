@@ -16,6 +16,9 @@ public class Camera {
 	}
 
 	public void setZoomLevel(double zoomLevel) {
+		if (zoomLevel < 0 || zoomLevel > 10) {
+			throw new IllegalArgumentException("zoomLevel must be between 0 and 10.");
+		}
 		this.zoomLevel = zoomLevel;
 	}
 
